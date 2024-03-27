@@ -1,5 +1,5 @@
 import { RecipeReviewCard } from "../base-component";
 
-export default function Home() {
+export default function Card() {
   return <RecipeReviewCard />;
 }

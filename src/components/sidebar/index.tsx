@@ -18,12 +18,28 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
-import { Route, Routes } from "react-router-dom";
-import Home from "../pages/Home";
+import HomeIcon from "@mui/icons-material/Home";
+import AboutIcon from "@mui/icons-material/Info";
+import PriceIcon from "@mui/icons-material/PriceChange";
+import ContactIcon from "@mui/icons-material/ContactEmergency";
+import SettingIcon from "@mui/icons-material/Settings";
+import { NavLink, Route, Routes } from "react-router-dom";
+import Home from "../pages/Home/Home";
 import NavigationRoutes from "../../router-navigation/NavigationRoutes";
+import { Drafts } from "@mui/icons-material";
+import DarkModeSwitch from "../DarkModeSwitch";
+import ThemeModeSwitch from "../ThemeColorShuffle";
 
 const drawerWidth = 240;
-
+const items = [
+  { name: "Home", link: "/home", icon: <HomeIcon /> },
+  { name: "About", link: "/about", icon: <AboutIcon /> },
+  { name: "Price", link: "/price", icon: <PriceIcon /> },
+  { name: "Contact", link: "/contact", icon: <ContactIcon /> },
+  { name: "Send email", link: "/send-email", icon: <MailIcon /> },
+  { name: "Drafts", link: "/drafts", icon: <Drafts /> },
+  { name: "Settings", link: "/settings", icon: <SettingIcon /> },
+];
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
   open?: boolean;
 }>(({ theme, open }) => ({
@@ -94,7 +110,11 @@ export default function PersistentDrawerLeft() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Persistent drawer
+            Jewlery
+          </Typography>
+          <Typography display={"flex"} flexDirection={"row"}>
+            <ThemeModeSwitch />
+            <DarkModeSwitch />
           </Typography>
         </Toolbar>
       </AppBar>
@@ -116,13 +136,15 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
+          {items.map((text, index) => (
+            <NavLink key={text.name} to={text.link}>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>{text.icon}</ListItemIcon>
+                  <ListItemText primary={text.name} />
+                </ListItemButton>
+              </ListItem>
+            </NavLink>
           ))}
         </List>
         <Divider />

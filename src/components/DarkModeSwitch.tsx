@@ -9,11 +9,7 @@ const DarkModeSwitch = () => {
   const theme = useTheme();
   const colorMode = React.useContext(ThemeContext);
   return (
-    <ToggleButton
-      style={{ borderRadius: "50px", border: "none" }}
-      value="check"
-      onChange={colorMode.toggleColorMode}
-    >
+    <ToggleButton style={{ borderRadius: "50px", border: "none" }} value="check" onChange={colorMode.toggleColorMode}>
       change mode
       {theme.palette.mode === "dark" && <LightModeIcon color={"secondary"} />}
       {theme.palette.mode === "light" && <DarkModeIcon color={"secondary"} />}
