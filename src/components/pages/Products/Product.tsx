@@ -11,24 +11,22 @@ import "./Products.css";
 const Product = ({ product }: any) => {
   // return every product card
   return (
-    <Grid xs={12} md={4}>
-      <Card sx={{ minWidth: "90%" }}>
-        <CardActionArea>
-          <CardMedia component="img" height={352} image={product.image} alt="jewelry" />
-          <CardContent>
-            <p className="product-title">{product.title}</p>
-            <p className="product-vendor">{product.vendor}</p>
-            <Rating name="read-only" value={product.rating} readOnly />
-          </CardContent>
-        </CardActionArea>
-        <CardActions className="d-flex justify-content-between">
-          <p className="product-price">${product.price}</p>
-          <Link to={`/product/${product._id}`} className="text-decoration-none">
-            <Button variant="contained">Order Now</Button>
-          </Link>
-        </CardActions>
-      </Card>
-    </Grid>
+    <Card sx={{ minWidth: "90%" }}>
+      <CardActionArea>
+        <CardMedia component="img" height={352} image={product.image} alt="jewelry" />
+        <CardContent>
+          <p className="product-title">{product.title}</p>
+          <p className="product-vendor">{product.vendor}</p>
+          <Rating name="read-only" value={product.rating} readOnly />
+        </CardContent>
+      </CardActionArea>
+      <CardActions className="d-flex justify-content-between">
+        <p className="product-price">${product.price}</p>
+        <Link to={`/product/${product._id}`} className="text-decoration-none">
+          <Button variant="contained">Order Now</Button>
+        </Link>
+      </CardActions>
+    </Card>
   );
 };
 

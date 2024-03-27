@@ -18,9 +18,9 @@ function Review() {
   };
 
   const [reviews, setReviews] = React.useState([]);
-
+  console.log("reviews", reviews);
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
+    fetch("https://fakestoreapi.com/products/category/jewelery")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
@@ -35,11 +35,11 @@ function Review() {
           {reviews.map((review: any) => (
             <div className="review-section mx-auto" key={review._id}>
               <div className="mt-4">
-                <img src={review.img} alt="" className="review-img" />
+                <img src={review.image} alt="" className="review-img" />
               </div>
-              <p className="review-message">{review.message}</p>
-              <Rating name="read-only" size="medium" value={review.rating} readOnly />
-              <p className="review-name">{review.Name}</p>
+              <p className="review-message">{review.description}</p>
+              <Rating name="read-only" size="medium" value={review.rating.rate} readOnly />
+              <p className="review-name">{review.title}</p>
             </div>
           ))}
         </AutoPlaySwipeableViews>

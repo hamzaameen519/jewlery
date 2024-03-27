@@ -24,7 +24,7 @@ const Home = () => {
       <Slider />
       <Category />
       <Products quantity={6} />
-      <RecipeReviewCard cardArray={cardArray} />
+      {/* <RecipeReviewCard cardArray={cardArray} /> */}
       <Link to="/products" style={{ textDecoration: "none" }}>
         <Button variant="contained" color="secondary">
           Explore All Products
