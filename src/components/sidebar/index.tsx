@@ -20,20 +20,21 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import HomeIcon from "@mui/icons-material/Home";
 import AboutIcon from "@mui/icons-material/Info";
+import FeatureProductsIcon from "@mui/icons-material/Info";
 import PriceIcon from "@mui/icons-material/PriceChange";
 import ContactIcon from "@mui/icons-material/ContactEmergency";
 import SettingIcon from "@mui/icons-material/Settings";
-import { NavLink, Route, Routes } from "react-router-dom";
-import Home from "../pages/Home/Home";
+import { NavLink } from "react-router-dom";
 import NavigationRoutes from "../../router-navigation/NavigationRoutes";
 import { Drafts } from "@mui/icons-material";
 import DarkModeSwitch from "../DarkModeSwitch";
 import ThemeModeSwitch from "../ThemeColorShuffle";
-
+import "./index.css"
 const drawerWidth = 240;
 const items = [
   { name: "Home", link: "/home", icon: <HomeIcon /> },
   { name: "About", link: "/about", icon: <AboutIcon /> },
+  { name: "Feature Products", link: "/feature-product", icon: <FeatureProductsIcon /> },
   { name: "Price", link: "/price", icon: <PriceIcon /> },
   { name: "Contact", link: "/contact", icon: <ContactIcon /> },
   { name: "Send email", link: "/send-email", icon: <MailIcon /> },
@@ -137,7 +138,7 @@ export default function PersistentDrawerLeft() {
         <Divider />
         <List>
           {items.map((text, index) => (
-            <NavLink key={text.name} to={text.link}>
+            <NavLink className="nav" key={text.name} to={text.link}  >
               <ListItem disablePadding>
                 <ListItemButton>
                   <ListItemIcon>{text.icon}</ListItemIcon>
@@ -147,17 +148,7 @@ export default function PersistentDrawerLeft() {
             </NavLink>
           ))}
         </List>
-        <Divider />
-        <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
+       
       </Drawer>
       <Main open={open}>
         <DrawerHeader />

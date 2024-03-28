@@ -1,7 +1,8 @@
 import React from "react";
+import Footer from "../../Shared/Footer/Footer";
 
 const About = () => {
-  return <div>About</div>;
+  return <Footer />
 };
 
 export default About;

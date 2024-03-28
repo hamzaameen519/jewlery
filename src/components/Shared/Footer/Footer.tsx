@@ -59,11 +59,11 @@ function Footer() {
               CONTACT INFO
             </Typography>
             <Typography variant="body1" className="footer-text">
-              250 Main Street, Brooklyn, NY 52143, US
+             CITY HOUSING SHA PUR BOSAN ROAD MULTAN
             </Typography>
             <Typography variant="body1" className="footer-text">
               <i className="fas fa-phone-alt ico"></i>
-              Tell <span className="number">(800)-456-789</span>
+              Tell <span className="number">03024346896</span>
             </Typography>
             <Typography variant="body1" className="footer-text">
               <i className="fas fa-envelope ico"></i>

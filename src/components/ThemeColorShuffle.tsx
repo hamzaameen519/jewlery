@@ -1,4 +1,3 @@
-import { useTheme } from "@mui/material/styles";
 import { ThemeContext } from "../theme/MyThemeProvider";
 import ColorLensIcon from "@mui/icons-material/ColorLens";
 import ToggleButton from "@mui/material/ToggleButton";
