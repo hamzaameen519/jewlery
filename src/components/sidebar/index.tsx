@@ -24,12 +24,13 @@ import FeatureProductsIcon from "@mui/icons-material/Info";
 import PriceIcon from "@mui/icons-material/PriceChange";
 import ContactIcon from "@mui/icons-material/ContactEmergency";
 import SettingIcon from "@mui/icons-material/Settings";
+import ReviewIcon from "@mui/icons-material/Reviews";
 import { NavLink } from "react-router-dom";
 import NavigationRoutes from "../../router-navigation/NavigationRoutes";
 import { Drafts } from "@mui/icons-material";
 import DarkModeSwitch from "../DarkModeSwitch";
 import ThemeModeSwitch from "../ThemeColorShuffle";
-import "./index.css"
+import "./index.css";
 const drawerWidth = 240;
 const items = [
   { name: "Home", link: "/home", icon: <HomeIcon /> },
@@ -40,6 +41,7 @@ const items = [
   { name: "Send email", link: "/send-email", icon: <MailIcon /> },
   { name: "Drafts", link: "/drafts", icon: <Drafts /> },
   { name: "Settings", link: "/settings", icon: <SettingIcon /> },
+  { name: "Review", link: "/review", icon: <ReviewIcon /> },
 ];
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
   open?: boolean;
@@ -138,7 +140,7 @@ export default function PersistentDrawerLeft() {
         <Divider />
         <List>
           {items.map((text, index) => (
-            <NavLink className="nav" key={text.name} to={text.link}  >
+            <NavLink className="nav" key={text.name} to={text.link}>
               <ListItem disablePadding>
                 <ListItemButton>
                   <ListItemIcon>{text.icon}</ListItemIcon>
@@ -148,7 +150,6 @@ export default function PersistentDrawerLeft() {
             </NavLink>
           ))}
         </List>
-       
       </Drawer>
       <Main open={open}>
         <DrawerHeader />

@@ -1,6 +1,3 @@
-import Container from "@mui/material/Container";
-import { Main } from "./components/Main";
-import NavigationRoutes from "./router-navigation/NavigationRoutes";
 import { useTheme } from "@mui/material";
 import PersistentDrawerLeft from "./components/sidebar";
 

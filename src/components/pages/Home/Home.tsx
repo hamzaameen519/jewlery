@@ -1,6 +1,6 @@
 import React from "react";
 import { RecipeReviewCard } from "../../base-component";
-import Slider from "../Slider/Slider";
+import SliderImage from "../Slider/Slider";
 import Category from "../Category/Category";
 import Products from "../Products/Products";
 import { Link } from "react-router-dom";
@@ -35,11 +35,10 @@ const Home = () => {
   ];
   return (
     <>
-      <RecipeReviewCard cardArray={ cardArray } />
-      <Slider />
+      {/* <RecipeReviewCard cardArray={ cardArray } /> */}
+      <SliderImage cardArray={cardArray} />
       <Category />
-      
-      
+
       <Link to="/products" style={{ textDecoration: "none" }}>
         <Button variant="contained" color="secondary">
           Explore All Products
@@ -47,7 +46,6 @@ const Home = () => {
       </Link>
       <Review />
       <Trust />
-      
     </>
   );
 };
