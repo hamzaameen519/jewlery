@@ -4,6 +4,9 @@ import { theme as _default } from "./presets/default";
 import { theme as red } from "./presets/red";
 import { Palette, PaletteColor } from "@mui/material/styles";
 import { DeepPartial } from "../utility/types";
+import { theme as purple } from "./presets/purple";
+import { theme as yellow } from "./presets/yellow";
+import { theme as orange } from "./presets/orange";
 
 declare module "@mui/material/styles" {
   interface Palette {
@@ -48,4 +51,7 @@ export const color = {
   1: green,
   2: blue,
   3: red,
+  4: yellow,
+  5: purple,
+  6: orange,
 };

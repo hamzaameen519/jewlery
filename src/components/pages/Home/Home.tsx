@@ -1,14 +1,11 @@
-import React from "react";
-import { RecipeReviewCard } from "../../base-component";
 import SliderImage from "../Slider/Slider";
 import Category from "../Category/Category";
-import Products from "../Products/Products";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import Review from "../Review/Review";
 import Trust from "../../../Trust/Trust";
-import Footer from "../../Shared/Footer/Footer";
-
+import { Bangles, Bejeweled, ChiGold, FemaleSilver, ModernPlainSterlingSilver } from "../../../common/images/image";
+import About from "../About/About";
 const Home = () => {
   const cardArray = [
     {
@@ -16,28 +13,36 @@ const Home = () => {
       title: "Home Furnished",
       subheader: "Beauty House",
       body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      image: ["https://images.pexels.com/photos/1395306/pexels-photo-1395306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", "https://images.pexels.com/photos/13595793/pexels-photo-13595793.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"],
+      image: [Bejeweled],
     },
     {
       avatar: "H",
       title: "Home Furnished",
       subheader: "Beauty House",
       body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      image: ["https://images.pexels.com/photos/1395306/pexels-photo-1395306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", "https://images.pexels.com/photos/13595793/pexels-photo-13595793.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"],
+      image: [ModernPlainSterlingSilver],
     },
     {
       avatar: "H",
       title: "Home Furnished",
       subheader: "Beauty House",
       body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      image: ["https://images.pexels.com/photos/1395306/pexels-photo-1395306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", "https://images.pexels.com/photos/13595793/pexels-photo-13595793.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"],
+      image: [ChiGold],
+    },
+    {
+      avatar: "H",
+      title: "Home Furnished",
+      subheader: "Beauty House",
+      body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      image: [FemaleSilver],
     },
   ];
   return (
     <>
       {/* <RecipeReviewCard cardArray={ cardArray } /> */}
       <SliderImage cardArray={cardArray} />
-      <Category />
+      <About />
+      {/* <Category />
 
       <Link to="/products" style={{ textDecoration: "none" }}>
         <Button variant="contained" color="secondary">
@@ -45,7 +50,7 @@ const Home = () => {
         </Button>
       </Link>
       <Review />
-      <Trust />
+      <Trust /> */}
     </>
   );
 };

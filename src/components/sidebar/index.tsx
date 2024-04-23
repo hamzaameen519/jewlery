@@ -115,7 +115,7 @@ export default function PersistentDrawerLeft() {
           <Typography variant="h6" noWrap component="div">
             Jewlery
           </Typography>
-          <Typography display={"flex"} flexDirection={"row"}>
+          <Typography display={"flex"} flexDirection={"row"} flex={"auto"} justifyContent={"end"}>
             <ThemeModeSwitch />
             <DarkModeSwitch />
           </Typography>
@@ -139,7 +139,7 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-          {items.map((text, index) => (
+          {items.map((text) => (
             <NavLink className="nav" key={text.name} to={text.link}>
               <ListItem disablePadding>
                 <ListItemButton>
